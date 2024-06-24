@@ -1,0 +1,1 @@
+../../home/tdellmann/dotfiles/nixos/hyprland.nix
