@@ -52,9 +52,9 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
+    variant = "nodeadkeys";
     layout = "de";
-    xkbVariant = "nodeadkeys";
   };
 
   # Configure console keymap
