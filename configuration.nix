@@ -62,6 +62,12 @@
     variant = "nodeadkeys";
     layout = "de";
   };
+  
+  services.xserver.displayManager.gdm.wayland = true;
+  programs.hyprland = {    
+    enable = true;    
+    xwayland.enable = true;    
+  };
 
   # Configure console keymap
   console.keyMap = "de-latin1-nodeadkeys";
@@ -95,7 +101,7 @@
     description = "tdellmann";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-    #  thunderbird
+      thunderbird
     ];
   };
 
@@ -127,6 +133,14 @@
     jetbrains-toolbox
     bruno
     gnome.gnome-tweaks
+
+    # hyprland
+    hypridle
+    hyprpaper
+    hyprlock
+    mako
+    rofi
+    waybar
   ];
 
   fonts.packages = with pkgs; [
