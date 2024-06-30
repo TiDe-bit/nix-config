@@ -116,13 +116,31 @@
     wget
     git
     zig
+    bison
+    flex
+		unzip
+    fontforge
+    makeWrapper
+    pkg-config
+    gnumake
+    gcc
+    libiconv
+    autoconf
+    automake
+    libtool
+		nodePackages.npm
+		python3
+
     vim
     neovim
-    oh-my-zsh
+    luarocks
+
+		oh-my-zsh
     htop
     stow
     gnupg
     pinentry
+    
     alacritty
     kitty
     starship
@@ -138,10 +156,24 @@
     hypridle
     hyprpaper
     hyprlock
+    hyprshot
     mako
-    rofi
+    rofi-wayland
     waybar
+    pavucontrol
+    blueman
+    networkmanagerapplet
+    wl-clipboard
   ];
+
+  programs.light.enable = true;
+  services.actkbd = {
+    enable = true;
+    bindings = [
+      { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
+      { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
+    ];
+  };
 
   fonts.packages = with pkgs; [
     noto-fonts
@@ -229,7 +261,7 @@
 
       		# export PATH=$PATH:/$GOPATH/bin
       		export PATH="$PATH:$HOME/.krew/bin"
-      		export PATH="$PATH:~/.cargo/bin"
+      		export PATH="$PATH:$HOME/.cargo/bin"
       		export PATH="$PATH:$GOPATH/bin"
 
       		# Path to your oh-my-zsh installation.
@@ -253,7 +285,7 @@
     promptInit = "";
 
     histSize = 10000;
-    histFile = "/home/tdellmann/.zsh-history";
+    histFile = "$HOME/.zsh-history";
   };
 
   users.defaultUserShell = pkgs.zsh;
