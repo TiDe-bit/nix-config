@@ -152,6 +152,11 @@
     bruno
     gnome.gnome-tweaks
 
+    # misc
+    webcord
+    zoom-us
+    slack
+
     # hyprland
     hypridle
     hyprpaper
