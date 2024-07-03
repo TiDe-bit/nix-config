@@ -139,7 +139,7 @@
     htop
     stow
     gnupg
-    pinentry
+    pinentry-curses
     
     alacritty
     kitty
@@ -169,7 +169,15 @@
     blueman
     networkmanagerapplet
     wl-clipboard
+    kanshi
   ];
+
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+     enable = true;
+     enableSSHSupport = true;
+     # pinentryPackage = pkgs.pinentry-qt;
+  };
 
   programs.light.enable = true;
   services.actkbd = {
