@@ -2,6 +2,12 @@
 {
   imports = [];
 
+  services.xserver.displayManager.gdm.wayland = true;
+  programs.hyprland = {    
+    enable = true;    
+    xwayland.enable = true;    
+  };
+
   environment.systemPackages = with pkgs; [
     hypridle
     hyprpaper
