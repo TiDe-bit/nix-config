@@ -20,5 +20,15 @@
         # inputs.home-manager.nixosModules.default
       ];
     };
+
+    nixosConfigurations.gaming = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./configuration.nix
+        ./modules/hyprland.nix
+        ./modules/shell.nix
+        ./modules/gaming.nix
+      ];
+    };
   };
 }
