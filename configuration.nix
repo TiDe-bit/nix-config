@@ -143,12 +143,14 @@
     jetbrains-toolbox
     bruno
     gnome.gnome-tweaks
+    lazygit
 
     # misc
     webcord
     zoom-us
     slack
     spotify
+    obs-studio
   ];
 
   fonts.packages = with pkgs; [
