@@ -17,6 +17,7 @@
         ./configuration.nix
         ./modules/hyprland.nix
         ./modules/shell.nix
+        ./modules/base.nix
         # inputs.home-manager.nixosModules.default
       ];
     };
@@ -27,6 +28,7 @@
         ./configuration.nix
         ./modules/hyprland.nix
         ./modules/shell.nix
+        ./modules/base.nix
         ./modules/gaming.nix
       ];
     };
