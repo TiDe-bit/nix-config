@@ -58,6 +58,7 @@
     obs-studio
     imagemagick
     gimp
+    krita
   ];
 
   fonts.packages = with pkgs; [
