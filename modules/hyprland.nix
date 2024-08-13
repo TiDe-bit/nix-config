@@ -21,6 +21,7 @@
     networkmanagerapplet
     wl-clipboard
     kanshi
+    swww
   ];
 
   programs.light.enable = true;

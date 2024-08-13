@@ -31,7 +31,7 @@
 
       kbooma = "kubectl get pods --field-selector='status.phase!=Succeeded,status.phase!=Running'";
       kubectx = "k ctx";
-      kubewatch = "watch -n 0.5 'kubectl get pod | grep $1'";
+      kubewatch="watch -n 0.5 -c unbuffer 'kubecolor get pod | grep $1'";
       kw = "kubewatch";
 
 
@@ -47,6 +47,7 @@
       vommit = "git commit -a";
       master = "git switch master && git fetch && git pull";
       main = "git switch main && git pull";
+      lg="VISUAL=nvim lazygit";
       pfusch = "git commit -a --amend --no-edit --no-verify && gpf";
 
       uuidgen = "uuidgen | tr '[:upper:]' '[:lower:]' | tr -d '\n'";

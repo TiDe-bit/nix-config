@@ -42,7 +42,7 @@
     kitty
     starship
     zellij
-    cargo
+    rustup
     go
     vscode
     jetbrains-toolbox
