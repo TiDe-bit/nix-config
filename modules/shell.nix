@@ -70,7 +70,6 @@
       		export ZSH="$HOME/.oh-my-zsh"
       		export HYPRSHOT_DIR="~/Pictures/Screenshots"
 
-
       		export NVM_DIR="$HOME/.nvm"
       		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
       		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -85,18 +84,6 @@
 
         	eval "$(zellij setup --generate-auto-start zsh)"
       		eval "$(starship init zsh --print-full-init)"
-
-      		# ZELLIH setup
-      		if [[ -z "$ZELLIJ" ]]; then
-          	if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-            	zellij attach -c
-          	else
-              zellij
-          	fi
-          	if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-              exit
-          	fi
-      		fi
       	'';
     promptInit = "";
 

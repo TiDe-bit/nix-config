@@ -18,6 +18,7 @@
         ./modules/hyprland.nix
         ./modules/shell.nix
         ./modules/base.nix
+        ./modules/private.nix
         # inputs.home-manager.nixosModules.default
       ];
     };

@@ -47,7 +47,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true; 
+  environment.variables.GTK_THEME = "Adwaita:dark";
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
