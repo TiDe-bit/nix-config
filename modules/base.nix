@@ -1,5 +1,9 @@
-{config, pkgs, ...}: 
+{config, pkgs, inputs, ...}: 
 {
+  nixpkgs.overlays = [
+    (import ../overlays/go.nix { inherit inputs; inherit config; })
+  ];
+
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
     enable = true;

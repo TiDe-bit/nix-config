@@ -3,6 +3,7 @@
   imports = [];
 
   environment.systemPackages = with pkgs; [
+    gnome.gnome-boxes
     ausweisapp
   ];
 }
