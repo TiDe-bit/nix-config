@@ -12,7 +12,11 @@
 
   outputs = { self, nixpkgs, ... }@inputs: 
     let 
-      modules = import ./modules/all.nix { inherit (nixpkgs) lib; };
+      modules = nixpkgs.lib.pipe ./modules [
+      builtins.readDir
+      (nixpkgs.lib.filterAttrs (name: _: nixpkgs.lib.hasSuffix ".nix" name))
+      (nixpkgs.lib.mapAttrsToList (name: _: ./modules + "/${name}"))
+      ];
     in
     {
       nixosConfigurations = {
@@ -25,7 +29,7 @@
                 inherit inputs;
               };
             }
-          ] ++ modules.nixos;
+          ] ++ modules;
         };
       };
     # nixosConfigurations.default = nixpkgs.lib.nixosSystem {
