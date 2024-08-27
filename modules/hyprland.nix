@@ -1,4 +1,4 @@
-{config, pkgs, ...}: 
+{ pkgs, ...}: 
 {
   imports = [];
 
@@ -7,8 +7,8 @@
     enable = true;    
     xwayland.enable = true;    
   };
-  environment.sessionVariables = rec {
-    XCURSOR_THEME="adawait";
+  environment.sessionVariables =  {
+    XCURSOR_THEME="Adawaita";
     # XDG_CACHE_HOME  = "$HOME/.cache";
     # XDG_CONFIG_HOME = "$HOME/.config";
     # XDG_DATA_HOME   = "$HOME/.local/share";

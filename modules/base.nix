@@ -2,6 +2,14 @@
 {
   nixpkgs.overlays = [
     (import ../overlays/go.nix { inherit inputs; inherit config; })
+    (import (builtins.fetchTarball {
+      url = "https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz";
+      sha256 = "sha256:1f41psqw00mdcwm28y1frjhssybg6r8i7rpa8jq0jiannksbj27s";
+    } ))
+    (import (builtins.fetchTarball {
+      url = "https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz";
+      sha256 = "sha256:1f41psqw00mdcwm28y1frjhssybg6r8i7rpa8jq0jiannksbj27s";
+    }))
   ];
 
   virtualisation.docker.enable = true;
