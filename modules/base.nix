@@ -1,4 +1,4 @@
-{config, pkgs, inputs, ...}: 
+{config, pkgs, inputs, channels, ...}: 
 {
   nixpkgs.overlays = [
     (import ../overlays/go.nix { inherit inputs; inherit config; })
@@ -17,7 +17,6 @@
     enable = true;
     setSocketVariable = true;
   };
-
 
   programs.firefox.enable = true;
 
@@ -46,6 +45,8 @@
 
 		oh-my-zsh
     htop
+    btop
+    fastfetch
     stow
     gnupg
     pinentry-curses
@@ -56,6 +57,9 @@
     zellij
     rustup
     go
+    nodejs
+    nodePackages.npm
+    yarn
     vscode
     jetbrains-toolbox
     bruno
@@ -101,6 +105,4 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-
 }
