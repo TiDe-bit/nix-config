@@ -8,7 +8,7 @@
     xwayland.enable = true;    
   };
   environment.sessionVariables =  {
-    XCURSOR_THEME="Adawaita";
+    # XCURSOR_THEME="Adwaita";
     # XDG_CACHE_HOME  = "$HOME/.cache";
     # XDG_CONFIG_HOME = "$HOME/.config";
     # XDG_DATA_HOME   = "$HOME/.local/share";

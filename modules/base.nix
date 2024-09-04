@@ -6,17 +6,7 @@
       url = "https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz";
       sha256 = "sha256:1f41psqw00mdcwm28y1frjhssybg6r8i7rpa8jq0jiannksbj27s";
     } ))
-    (import (builtins.fetchTarball {
-      url = "https://github.com/mozilla/nixpkgs-mozilla/archive/master.tar.gz";
-      sha256 = "sha256:1f41psqw00mdcwm28y1frjhssybg6r8i7rpa8jq0jiannksbj27s";
-    }))
   ];
-
-  virtualisation.docker.enable = true;
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
 
   programs.firefox.enable = true;
 
@@ -42,6 +32,9 @@
     vim
     neovim
     luarocks
+    ripgrep
+    fd
+    fzf
 
 		oh-my-zsh
     htop
@@ -50,7 +43,7 @@
     stow
     gnupg
     pinentry-curses
-    
+
     alacritty
     kitty
     starship
@@ -60,6 +53,7 @@
     nodejs
     nodePackages.npm
     yarn
+    protonmail-bridge-gui
     vscode
     jetbrains-toolbox
     bruno
