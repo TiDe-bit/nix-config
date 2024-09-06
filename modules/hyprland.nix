@@ -30,7 +30,8 @@
     rofi-wayland
     waybar
     pavucontrol
-    blueman
+    # WARNING: this package seems to be broken currently
+    # blueman
     networkmanagerapplet
     wl-clipboard
     kanshi
