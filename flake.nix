@@ -22,6 +22,7 @@
     {
       nixosConfigurations = {
         tidy = nixpkgs.lib.nixosSystem {
+          # TODO: check if this can be set globally
           system = "x86_64-linux";
           modules = [
             ./machines/lil-thinkpad/configuration.nix
@@ -32,6 +33,18 @@
             }
           ] ++ modules;
         };
+
+        kidy = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./machines/kde-thinkpad/configuration.nix
+            {
+              _module.args = {
+                inherit inputs;
+              };
+            }
+          ] ++ modules;
+        }
       };
     # nixosConfigurations.default = nixpkgs.lib.nixosSystem {
     #   specialArgs = {inherit inputs;};
