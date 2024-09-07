@@ -44,7 +44,7 @@
               };
             }
           ] ++ modules;
-        }
+        };
       };
     # nixosConfigurations.default = nixpkgs.lib.nixosSystem {
     #   specialArgs = {inherit inputs;};
