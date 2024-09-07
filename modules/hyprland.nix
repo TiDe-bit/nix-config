@@ -22,11 +22,16 @@
   };
 
   environment.systemPackages = with pkgs; [
+    sway
+    swaylock-effects
+    swayidle
+    swaynotificationcenter
+
     hypridle
     hyprpaper
     hyprlock
     hyprshot
-    mako
+    # mako
     rofi-wayland
     waybar
     pavucontrol
