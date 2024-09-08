@@ -57,7 +57,7 @@
     vscode
     jetbrains-toolbox
     bruno
-    gnome.gnome-tweaks
+    gnome-tweaks
     lazygit
 
     # misc
