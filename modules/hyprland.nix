@@ -22,6 +22,15 @@
   };
 
   environment.systemPackages = with pkgs; [
+    wl-clipboard
+    kanshi
+    swww
+
+    networkmanagerapplet
+    rofi-wayland
+    pavucontrol
+    waybar
+
     sway
     swaylock-effects
     swayidle
@@ -32,15 +41,8 @@
     hyprlock
     hyprshot
     # mako
-    rofi-wayland
-    waybar
-    pavucontrol
     # WARNING: this package seems to be broken currently
     # blueman
-    networkmanagerapplet
-    wl-clipboard
-    kanshi
-    swww
   ];
 
   programs.light.enable = true;

@@ -54,6 +54,7 @@
     nodePackages.npm
     yarn
     protonmail-bridge-gui
+    protonmail-bridge
     vscode
     jetbrains-toolbox
     bruno
