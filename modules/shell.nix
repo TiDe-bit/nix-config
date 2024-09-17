@@ -90,7 +90,7 @@
     
     histSize = 20000;
     # history.ignoreAllDups = true;
-    histFile = "$HOME/.zsh-history";
+    histFile = "$HOME/.zsh_history";
   };
 
   users.defaultUserShell = pkgs.zsh;
