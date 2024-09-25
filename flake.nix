@@ -26,12 +26,16 @@
           system = "x86_64-linux";
           modules = [
             ./machines/lil-thinkpad/configuration.nix
+            ./modules/base.nix
+            ./modules/hyprland.nix
+            ./modules/shell.nix
+            ./modules/private.nix
             {
               _module.args = {
                 inherit inputs;
               };
             }
-          ] ++ modules;
+            ];
         };
 
         kidy = nixpkgs.lib.nixosSystem {

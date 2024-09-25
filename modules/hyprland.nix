@@ -35,6 +35,8 @@
     swaylock-effects
     swayidle
     swaynotificationcenter
+    grim
+    slurp
 
     hypridle
     hyprpaper

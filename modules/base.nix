@@ -46,6 +46,7 @@
 
     alacritty
     kitty
+    killall
     starship
     zellij
     rustup
@@ -63,6 +64,7 @@
 
     # misc
     webcord
+    spotify
     zoom-us
     slack
     spotify
