@@ -1,13 +1,37 @@
-{ pkgs, ...}: 
+{ pkgs, ... }:
 {
-  imports = [];
+  imports = [ ];
 
+  # environment.variables.GTK_THEME = "Adawaita:dark";
+  services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
-  programs.hyprland = {    
-    enable = true;    
-    xwayland.enable = true;    
+  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
+
+  services.pipewire.wireplumber.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
   };
-  environment.sessionVariables =  {
+  # services.dbus.enable = true;
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    # gtk portal needed to make gtk apps happy
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-kde
+      # xdg-desktop-portal-gtk
+    ];
+  };
+
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+
+  environment.sessionVariables = {
     # XCURSOR_THEME="Adwaita";
     # XDG_CACHE_HOME  = "$HOME/.cache";
     # XDG_CONFIG_HOME = "$HOME/.config";
@@ -31,10 +55,12 @@
     pavucontrol
     waybar
 
-    sway
     swaylock-effects
     swayidle
+    wdisplays
     swaynotificationcenter
+    swaysome
+    swayest-workstyle
     grim
     slurp
 
