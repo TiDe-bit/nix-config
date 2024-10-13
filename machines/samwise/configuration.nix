@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -15,14 +16,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-2406fb5b-4c10-422c-abbb-e1abb5d0e0b2".device = "/dev/disk/by-uuid/2406fb5b-4c10-422c-abbb-e1abb5d0e0b2";
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "samwise"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-    # Enable networking
+  # Enable networking
   networking.networkmanager.enable = true;
 
   # Set your time zone.
