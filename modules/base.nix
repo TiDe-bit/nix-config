@@ -65,6 +65,7 @@
     # misc
     webcord
     spotify
+    evolution
     zoom-us
     slack
     spotify
